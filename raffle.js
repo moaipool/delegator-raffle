@@ -6,7 +6,7 @@
  * Useful for Cardano stake pool giveaways, raffles and so on.
  * 
  * @author Will[MOAI]
- * @url https://github.com/moaipool/stakepool-raffle
+ * @url https://github.com/moaipool/delegator-raffle
  * @version 1.0
  * @license MIT License (MIT)
  */
@@ -131,9 +131,11 @@ async function run() {
       console.log('no valid stake addresses found')
       console.info('discarded', discard);
     }
+    process.exit(0);
 
   } catch (err) {
     console.log('error occurred:', err);
+    process.exit(1);
   }
 }
 
